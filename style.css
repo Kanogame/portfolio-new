@@ -129,6 +129,11 @@ body
         text-align: center;
         color: #FFFFFF;
     }
+
+    #canvas
+    {
+        display: none;
+    }
     
 }
 
@@ -221,6 +226,31 @@ body
     .main-text
     {
         justify-content: center;
+    }
+
+    .main-pic
+    {
+        position: relative;
+    }
+
+    #canvas
+    {
+        display: block;
+        border-radius: 999px;
+    }
+
+    .ico-h
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .dots
+    {
+        position: absolute;
+        top: 62px;
+        left: 58px;
     }
 
     .main-socials
