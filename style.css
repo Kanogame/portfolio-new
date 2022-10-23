@@ -77,6 +77,11 @@ body
     {
         display: none;
     }
+    
+    #canvas
+    {
+        display: none;
+    }
 
     .main-content
     {
@@ -87,12 +92,11 @@ body
         justify-content: center;
         flex-direction: column-reverse;
     }
-
+    
     .adv
     {
         background: #1E1E1E;
         padding: 100px 0;
-        border-top: 1px solid #7B4AE233;
     }
 
     .adv-content
@@ -118,6 +122,12 @@ body
         gap: 30px;
     }
 
+    .adv-tabs:hover
+    {
+        background-color: rgba(123, 74, 226, 0.1);
+        border: none;
+    }
+
     .tabs-name
     {
         font-style: normal;
@@ -130,11 +140,41 @@ body
         color: #FFFFFF;
     }
 
-    #canvas
+    .about-me
     {
-        display: none;
+        background: #1E1E1E;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .me-photo
+    {
+        border-radius: 999px;
+        border: 1px solid rgba(123, 74, 226, 0.5);
+    }
+
+    .me-h2
+    {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 52px;
+        line-height: 61px;
+        color: white;
+    }
+
+    .me-p
+    {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: rgba(255, 255, 255, 0.5)
     }
     
+    .top-line
+    {
+        border-top: 1px solid rgba(123, 74, 226, 0.2);
+    }
 }
 
 @media (min-width: 1000px)
@@ -200,6 +240,7 @@ body
         transition: width 0.3s ease 0s, left 0.3s ease 0s;
         width: 0;
     }
+
     .header-button:hover:after 
     { 
         width: 100%; 
@@ -274,5 +315,10 @@ body
         align-items: center;
         justify-content: center;
         flex-direction: row;
+    }
+
+    .about-content
+    {
+        gap: 250px;
     }
 }
