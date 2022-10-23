@@ -1,3 +1,8 @@
+:root
+{
+  --card-color: #090E16;
+}
+
 html {
     font-family: roboto, sans-serif;
     box-sizing: border-box;
@@ -23,7 +28,7 @@ body
 
     .main
     {
-        background: #1E1E1E;
+        background: #090E16;
         padding-bottom: 50px 0;
     }
 
@@ -95,7 +100,7 @@ body
     
     .adv
     {
-        background: #1E1E1E;
+        background: #090E16;
         padding: 100px 0;
     }
 
@@ -146,7 +151,7 @@ body
 
     .about-me
     {
-        background: #1E1E1E;
+        background: #090E16;
         padding-top: 50px;
         padding-bottom: 50px;
     }
@@ -184,6 +189,29 @@ body
         color: rgba(255, 255, 255, 0.5);
         text-align: left;
     }
+
+    .projects
+    {
+        background: #090E16;
+    }
+
+    .projects-content
+    {
+        margin: 0 auto;
+        max-width: 1640px;
+    }
+
+    .card
+    {
+        width: 360px;
+        height: 500px;
+        background-color: #FFFFFF;
+    }
+
+    .proj-header
+    {
+        padding: 50px;
+    }
     
     .top-line
     {
@@ -196,7 +224,7 @@ body
     .header
     {
         display: block;
-        background: #1E1E1E;
+        background: #090E16;
         padding-top: 40px;
         padding-bottom: 30px;
         padding-left: 30px;
@@ -418,5 +446,83 @@ body
     .about-content
     {
         gap: 200px;
+    }
+
+    .proj-list
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    #cards:hover > .card::after 
+    {
+        opacity: 1;
+    }
+
+    .card
+    {
+        background-color: rgba(123, 74, 226, 0.1);
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        height: 260px;
+        flex-direction: column;
+        position: relative;
+        width: 300px;  
+    }
+
+    .card:hover::before 
+    {
+        opacity: 1;
+    }
+      
+    .card::before,
+    .card::after 
+    {
+        border-radius: inherit;
+        content: "";
+        height: 100%;
+        left: 0px;
+        opacity: 0;
+        position: absolute;
+        top: 0px;
+        transition: opacity 500ms;
+        width: 100%;
+    }
+    
+    .card::before 
+    {
+        background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y), 
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+        );
+        z-index: 3;
+    }
+    
+    .card::after 
+    {  
+        background: radial-gradient(
+        600px circle at var(--mouse-x) var(--mouse-y), 
+        rgba(123, 74, 226, 0.5),
+        transparent 40%
+        );
+        z-index: 1;
+    }
+
+    .card > .card-content
+    {
+        background-color: var(--card-color);
+        border-radius: inherit;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        inset: 1px;
+        padding: 10px;
+        position: absolute;
+        z-index: 2;
     }
 }
