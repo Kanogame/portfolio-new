@@ -101,3 +101,39 @@ function tick() {
 }
 
 tick();
+
+const targetDiv1 = document.getElementById("p-info");
+const btn1 = document.getElementById("p-bnt");
+const targetDiv2 = document.getElementById("f-info");
+const btn2 = document.getElementById("f-bnt");
+const targetDiv3 = document.getElementById("d-info");
+const btn3 = document.getElementById("d-bnt");
+btn1.onclick = function () {
+  targetDiv2.style.display = "none";
+  targetDiv3.style.display = "none";
+  if (targetDiv1.style.display !== "none") {
+    targetDiv1.style.display = "none";
+  } else {
+    targetDiv1.style.display = "block";
+  }
+}
+
+btn2.onclick = function () {
+  targetDiv1.style.display = "none";
+  targetDiv3.style.display = "none";
+  if (targetDiv2.style.display !== "none") {
+    targetDiv2.style.display = "none";
+  } else {
+    targetDiv2.style.display = "block";
+  }
+}
+
+btn3.onclick = function () {
+  targetDiv2.style.display = "none";
+  targetDiv1.style.display = "none";
+  if (targetDiv3.style.display !== "none") {
+    targetDiv3.style.display = "none";
+  } else {
+    targetDiv3.style.display = "block";
+  }
+}

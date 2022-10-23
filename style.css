@@ -102,6 +102,10 @@ body
     .adv-content
     {
         margin: 0 auto;
+    }
+
+    .tabs
+    {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -153,6 +157,15 @@ body
         border: 1px solid rgba(123, 74, 226, 0.5);
     }
 
+    .me-text
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .me-h2
     {
         font-style: normal;
@@ -168,7 +181,8 @@ body
         font-weight: 400;
         font-size: 18px;
         line-height: 25px;
-        color: rgba(255, 255, 255, 0.5)
+        color: rgba(255, 255, 255, 0.5);
+        text-align: left;
     }
     
     .top-line
@@ -311,14 +325,98 @@ body
     .adv-content
     {
         margin: 0 auto;
+        
+    }
+    
+    .tabs
+    {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: row;
     }
 
+    .info
+    {
+        margin: 0 auto;
+        margin-top: 32px;
+        background: rgba(123, 74, 226, 0.1);
+        max-width: 900px;
+        border-radius: 16px;
+        transition: opacity 0.5s;
+        opacity: 1;
+    }
+
+    #p-info
+    {
+        display: none;
+    }
+
+    #f-info
+    {
+        display: none;
+    }
+
+    #d-info
+    {
+        display: none;
+    }
+
+    .info-content
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 27px 20px;
+    }
+
+    .info-text
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .i-h5
+    {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #7B4AE2;
+    }
+
+    .i-p
+    {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 38px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #7B4AE2;
+    }
+
+    .info-btn
+    {
+        font-size: 24px;
+        border: 2px solid rgba(123, 74, 226, 0.5);
+        padding: 5px;
+        border-radius: 12px;
+    }
+
+    .me-text
+    {
+        gap: 20px;
+    }
+
     .about-content
     {
-        gap: 250px;
+        gap: 200px;
     }
 }
