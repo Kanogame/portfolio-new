@@ -23,7 +23,37 @@ body
 {
     .header
     {
+        display: block;
+        background: #090E16;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .header-content
+    {
+        margin: 0 auto;
+        max-width: 1640px;
+        height: 64px;
+        background: rgba(123, 74, 226, 0.05);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .header-buttons
+    {
         display: none;
+    }
+
+    .bars
+    {
+        display: block;
+        color: #FFFFFF;
     }
 
     .main
@@ -154,6 +184,21 @@ body
         color: #FFFFFF;
     }
 
+    #p-info
+    {
+        display: none;
+    }
+
+    #f-info
+    {
+        display: none;
+    }
+
+    #d-info
+    {
+        display: none;
+    }
+
     .about-me
     {
         background: #090E16;
@@ -163,8 +208,7 @@ body
 
     .me-photo
     {
-        border-radius: 999px;
-        border: 1px solid rgba(123, 74, 226, 0.5);
+        display: none;
     }
 
     .me-text
@@ -268,34 +312,18 @@ body
 
 @media (min-width: 1000px)
 {
-    .header
-    {
-        display: block;
-        background: #090E16;
-        padding-top: 40px;
-        padding-bottom: 30px;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    
-    .header-content
-    {
-        margin: 0 auto;
-        max-width: 1640px;
-        height: 64px;
-        background: rgba(123, 74, 226, 0.05);
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-left: 24px;
-        padding-right: 24px;
-    }
 
     .header-buttons
     {
         display: flex;
         gap: 17px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bars
+    {
+        display: none;
     }
     
     .header-button
@@ -401,7 +429,6 @@ body
     .adv-content
     {
         margin: 0 auto;
-        
     }
     
     .tabs
@@ -421,21 +448,6 @@ body
         border-radius: 16px;
         transition: opacity 0.5s;
         opacity: 1;
-    }
-
-    #p-info
-    {
-        display: none;
-    }
-
-    #f-info
-    {
-        display: none;
-    }
-
-    #d-info
-    {
-        display: none;
     }
 
     .info-content
@@ -491,6 +503,13 @@ body
         gap: 20px;
     }
 
+    .me-photo
+    {
+        border-radius: 999px;
+        border: 1px solid rgba(123, 74, 226, 0.5);
+        display: block;
+    }
+
     .about-content
     {
         gap: 200px;
@@ -502,7 +521,7 @@ body
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 50px;
+        gap: 20px;
     }
 
     #cards:hover > .card::after 
