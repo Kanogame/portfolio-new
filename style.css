@@ -71,6 +71,11 @@ body
         gap: 16px;
     }
 
+    .main-pic
+    {
+        display: none;
+    }
+
     .socials
     {
         display: flex;
@@ -203,9 +208,51 @@ body
 
     .card
     {
-        width: 360px;
-        height: 500px;
-        background-color: #FFFFFF;
+        background-color: rgba(123, 74, 226, 0.1);
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: calc(25% - 50px);
+        height: 400px;  
+    }
+
+    .card-header
+    {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .tag
+    {
+        background: rgba(123, 74, 226, 0.1);
+        padding: 5px 8px;
+        border-radius: 8px;
+        color: #7B4AE2;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+
+    .card-text
+    {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .card-pic
+    {
+        display: none;
     }
 
     .proj-header
@@ -314,6 +361,7 @@ body
     .main-pic
     {
         position: relative;
+        display: block;
     }
 
     #canvas
@@ -462,18 +510,6 @@ body
         opacity: 1;
     }
 
-    .card
-    {
-        background-color: rgba(123, 74, 226, 0.1);
-        border-radius: 10px;
-        cursor: pointer;
-        display: flex;
-        height: 260px;
-        flex-direction: column;
-        position: relative;
-        width: 300px;  
-    }
-
     .card:hover::before 
     {
         opacity: 1;
@@ -521,8 +557,15 @@ body
         flex-direction: column;
         flex-grow: 1;
         inset: 1px;
-        padding: 10px;
+        padding: 27px 30px;
         position: absolute;
         z-index: 2;
+    }
+
+    .card-pic
+    {
+        height: 100%; 
+        margin-top: 15px;     
+        margin-bottom: 20px;   
     }
 }
