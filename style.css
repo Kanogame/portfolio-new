@@ -242,6 +242,7 @@ body
     .projects
     {
         background: #090E16;
+        padding-bottom: 100px;
     }
 
     .projects-content
@@ -302,6 +303,44 @@ body
     .proj-header
     {
         padding: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .back-next
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .skills
+    {
+        background: #090E16;
+        padding: 100px 0;
+    }
+
+    .skill-text
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .sm
+    {
+        margin: 0;
+    }
+
+    .skill-block
+    {
+        margin-top: 70px;
+    }
+
+    .images
+    {
+        margin-top: 40px;
     }
     
     .top-line
