@@ -26,10 +26,7 @@ body
     {
         display: block;
         background: var(--background-color);
-        padding-top: 40px;
-        padding-bottom: 30px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding: 40px 10px 30px 10px;
     }
 
     .header-content
@@ -42,8 +39,8 @@ body
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-left: 24px;
-        padding-right: 24px;
+        padding-left:  10px;
+        padding-right: 10px;
     }
 
     .header-buttons
@@ -252,6 +249,13 @@ body
         max-width: 1640px;
     }
 
+    #cards
+    {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
     .card
     {
         background-color: rgba(123, 74, 226, 0.1);
@@ -259,9 +263,10 @@ body
         cursor: pointer;
         display: flex;
         flex-direction: column;
-        position: relative;
         width: 100%; 
-        height: 470px;
+        border: 1px solid #33245F;
+        padding: 10px;
+        margin: 10px 20px;
     }
 
     .card-header
@@ -324,73 +329,6 @@ body
         padding: 10px 30px;
         background-color: #7B4AE2;
         color: var(--background-color);
-    }
-
-    #cards:hover > .card::after 
-    {
-        opacity: 1;
-    }
-
-    .card:hover::before 
-    {
-        opacity: 1;
-    }
-      
-    .card::before,
-    .card::after 
-    {
-        border-radius: inherit;
-        content: "";
-        height: 100%;
-        left: 0px;
-        opacity: 0;
-        position: absolute;
-        top: 0px;
-        transition: opacity 500ms;
-        width: 100%;
-    }
-    
-    .card::before 
-    {
-        background: radial-gradient(
-        800px circle at var(--mouse-x) var(--mouse-y), 
-        rgba(255, 255, 255, 0.06),
-        transparent 40%
-        );
-        z-index: 3;
-    }
-    
-    .card::after 
-    {  
-        background: radial-gradient(
-        400px circle at var(--mouse-x) var(--mouse-y), 
-        rgba(123, 74, 226, 0.5),
-        transparent 40%
-        );
-        z-index: 1;
-    }
-
-    .card > .card-content
-    {
-        background-color: var(--background-color);
-        border-radius: inherit;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        inset: 1px;
-        padding: 27px 30px;
-        position: absolute;
-        z-index: 2;
-    }
-
-    .proj-list
-    {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 0 40px;
     }
 
     .proj-header
@@ -469,12 +407,20 @@ body
 
     .bottom-header
     {
-        background-color: #7B4AE280;;
+        background-color: #33245F;
     }
 
     .hb
     {
         display: block;
+    }
+
+    .bh-content
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
     }
     
     .top-line
@@ -485,6 +431,16 @@ body
 
 @media (min-width: 1000px)
 {
+    .header
+    {
+        padding: 40px 30px 30px 30px;
+    }
+
+    .header-content
+    {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
 
     .header-buttons
     {
@@ -689,10 +645,73 @@ body
         flex-wrap: wrap;
         gap: 20px;
     }
-    
+
     .card
     {
-        width: calc(25% - 50px);
-        height: 470px; 
+        position: relative;
+        height: 470px;
+        width: calc(25% - 70px);
+    }
+
+    #cards:hover > .card::after 
+    {
+        opacity: 1;
+    }
+
+    .card:hover::before 
+    {
+        opacity: 1;
+    }
+      
+    .card::before,
+    .card::after 
+    {
+        border-radius: inherit;
+        content: "";
+        height: 100%;
+        left: 0px;
+        opacity: 0;
+        position: absolute;
+        top: 0px;
+        transition: opacity 500ms;
+        width: 100%;
+    }
+    
+    .card::before 
+    {
+        background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y), 
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+        );
+        z-index: 3;
+    }
+    
+    .card::after 
+    {  
+        background: radial-gradient(
+        400px circle at var(--mouse-x) var(--mouse-y), 
+        rgba(123, 74, 226, 0.5),
+        transparent 40%
+        );
+        z-index: 1;
+    }
+
+    .card > .card-content
+    {
+        background-color: var(--background-color);
+        border-radius: inherit;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        inset: 1px;
+        padding: 27px 30px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .hb
+    {
+        display: block;
     }
 }
