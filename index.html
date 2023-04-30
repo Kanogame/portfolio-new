@@ -11,31 +11,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
+    <div class="header" id=top>
         <div class="header-content">
             <div class="logo">
                 <img src="./source/svg/logo.svg" alt="">
             </div>
             <div class="header-buttons">
-                <div class="header-button">
+                <a class="header-button" href="#main">
                     Home
-                </div>
-                <div class="header-button">
+                </a>
+                <a class="header-button" href="#about">
                     About me
-                </div>
-                <div class="header-button">
+                </a>
+                <a class="header-button" href=#port>
                     Portfolio
-                </div>
-                <div class="header-button">
+                </a>
+                <a class="header-button" href=#skill>
                     Skills
-                </div>
+                </a>
             </div>
             <div class="bars">
                 <img src="./source/svg/bars-solid.svg" alt="">
             </div>
         </div>
     </div>
-    <div class="main">
+    <div class="main" id="main">
         <div class="main-content">
             <div class="main-text">
                 <div class="message">
@@ -58,6 +58,7 @@
                 <div class="dots">
                     <canvas id="canvas"></canvas>
                 </div>
+                <script src="./anim.js"></script>
                 <img src="./source/svg/ico-hover.svg" class="ico-h" alt="">
             </div>
             <div class="main-socials">
@@ -71,7 +72,7 @@
     <div class="adv top-line">
         <div class="adv-content">
             <div class="tabs">
-                <div class="adv-tabs" id="p-bnt">
+                <div class="adv-tabs current" id="bnt">
                     <div class="tabs-logo">
                         <img src="./source/svg/prog.svg" alt="">
                     </div>
@@ -79,7 +80,7 @@
                         Programmer
                     </div>
                 </div>
-                <div class="adv-tabs" id="f-bnt">
+                <div class="adv-tabs" id="bnt">
                     <div class="tabs-logo">
                         <img src="./source/svg/front.svg" alt="">
                     </div>
@@ -87,7 +88,7 @@
                         Front-end
                     </div>
                 </div>
-                <div class="adv-tabs" id="d-bnt">
+                <div class="adv-tabs" id="bnt">
                     <div class="tabs-logo">
                         <img src="./source/svg/3d.svg" alt="">
                     </div>
@@ -96,7 +97,7 @@
                     </div>
                 </div>
             </div>
-            <div class="info" id="p-info">
+            <div class="info" id="info">
                 <div class="info-content">
                     <div class="info-text">
                         <div class="i-h5">
@@ -124,7 +125,7 @@
                     </div>
                 </div>
             </div>
-            <div class="info" id="f-info">
+            <div class="info" id="info">
                 <div class="info-content">
                     <div class="info-text">
                         <div class="i-h5">
@@ -152,7 +153,7 @@
                     </div>
                 </div>
             </div>
-            <div class="info" id="d-info">
+            <div class="info" id="info">
                 <div class="info-content">
                     <div class="info-text">
                         <div class="i-h5">
@@ -182,7 +183,7 @@
             </div>
         </div>
     </div>
-    <div class="about-me top-line">
+    <div class="about-me top-line" id=about>
         <div class="main-content about-content">
             <div>
                 <img src="./source/img/me.png" class="me-photo" alt="">
@@ -203,7 +204,7 @@
             </div>
         </div>
     </div>
-    <div class="projects top-line">
+    <div class="projects top-line" id=port>
         <div class="projects-content">
             <div class="proj-header">
                 <div class="main-text">
@@ -226,7 +227,7 @@
                         </div>
                         <img class="card-pic" src="./source/img/projects/pj1.png" alt="">
                         <div class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eos illo sint ducimus ex, ab architecto quis vel dignissimos, alias officiis! Enim nulla dolorum veniam molestiae voluptatum mollitia exercitationem deserunt?
+                            Working tetris with tons on features and local multiplayer
                         </div>
                         <a class="card-button">
                             View on github
@@ -243,7 +244,7 @@
                         </div>
                         <img class="card-pic" src="./source/img/projects/pj2.png" alt="">
                         <div class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eos illo sint ducimus ex, ab architecto quis vel dignissimos, alias officiis! Enim nulla dolorum veniam molestiae voluptatum mollitia exercitationem deserunt?
+                            Semi-p2p local file transfer app 
                         </div>
                         <a class="card-button">
                             View on github
@@ -253,14 +254,14 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-header">
-                            Tetris
+                            Minecraft launcher
                         </div>
                         <div class="card-tags">
-                            <span class="tag">C#</span>
+                            <span class="tag">C# - Golang - JS - mySQL</span>
                         </div>
-                        <img class="card-pic" src="./source/img/projects/pj1.png" alt="">
+                        <img class="card-pic" src="./source/img/projects/pj3.png" alt="">
                         <div class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eos illo sint ducimus ex, ab architecto quis vel dignissimos, alias officiis! Enim nulla dolorum veniam molestiae voluptatum mollitia exercitationem deserunt?
+                            Minecraft launcher infustructute builded around Go backend for website hosting and c# file server
                         </div>
                         <a class="card-button">
                             View on github
@@ -270,14 +271,14 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-header">
-                            Tetris
+                            KanoSuba 2
                         </div>
                         <div class="card-tags">
-                            <span class="tag">C#</span>
+                            <span class="tag">Node js - golang - react - postgreSQL</span>
                         </div>
-                        <img class="card-pic" src="./source/img/projects/pj1.png" alt="">
+                        <img class="card-pic" alt="NO IMAGE AVAILABLE">
                         <div class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eos illo sint ducimus ex, ab architecto quis vel dignissimos, alias officiis! Enim nulla dolorum veniam molestiae voluptatum mollitia exercitationem deserunt?
+                            Discord music bot infustructute with website on react & reactrouter with realtime webosocker music control
                         </div>
                         <a class="card-button">
                             View on github
@@ -287,65 +288,14 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-header">
-                            Tetris
+                            Chei-hod
                         </div>
                         <div class="card-tags">
-                            <span class="tag">C#</span>
+                            <span class="tag">Golang - JS - mySQL</span>
                         </div>
-                        <img class="card-pic" src="./source/img/projects/pj1.png" alt="">
+                        <img class="card-pic"  alt="NO IMAGE AVAILABLE">
                         <div class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eos illo sint ducimus ex, ab architecto quis vel dignissimos, alias officiis! Enim nulla dolorum veniam molestiae voluptatum mollitia exercitationem deserunt?
-                        </div>
-                        <a class="card-button">
-                            View on github
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <div class="card-header">
-                            Tetris
-                        </div>
-                        <div class="card-tags">
-                            <span class="tag">C#</span>
-                        </div>
-                        <img class="card-pic" src="./source/img/projects/pj1.png" alt="">
-                        <div class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eos illo sint ducimus ex, ab architecto quis vel dignissimos, alias officiis! Enim nulla dolorum veniam molestiae voluptatum mollitia exercitationem deserunt?
-                        </div>
-                        <a class="card-button">
-                            View on github
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <div class="card-header">
-                            Tetris
-                        </div>
-                        <div class="card-tags">
-                            <span class="tag">C#</span>
-                        </div>
-                        <img class="card-pic" src="./source/img/projects/pj1.png" alt="">
-                        <div class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eos illo sint ducimus ex, ab architecto quis vel dignissimos, alias officiis! Enim nulla dolorum veniam molestiae voluptatum mollitia exercitationem deserunt?
-                        </div>
-                        <a class="card-button">
-                            View on github
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <div class="card-header">
-                            Tetris
-                        </div>
-                        <div class="card-tags">
-                            <span class="tag">C#</span>
-                        </div>
-                        <img class="card-pic" src="./source/img/projects/pj1.png" alt="">
-                        <div class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eos illo sint ducimus ex, ab architecto quis vel dignissimos, alias officiis! Enim nulla dolorum veniam molestiae voluptatum mollitia exercitationem deserunt?
+                            relatively simple website with golang backend 
                         </div>
                         <a class="card-button">
                             View on github
@@ -355,7 +305,7 @@
             </div>
         </div>
     </div>
-    <div class="skills top-line">
+    <div class="skills top-line" id=skill>
         <div class="projects-content">
             <div class="skill-text">
                 <div class="message sm">
@@ -373,6 +323,9 @@
                         <img src="./source/svg/lang/go.svg" alt="">
                         <img src="./source/svg/lang/html.svg" alt="">
                         <img src="./source/svg/lang/css.svg" alt="">
+                        <img src="./source/svg/lang/nodejs.svg" alt="">
+                        <img src="./source/svg/lang/svelte.svg" alt="">
+                        <img src="./source/svg/lang/react.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -392,10 +345,10 @@
                         E-mail:
                     </div>
                     <div class="main-p">
-                        placeholder@gmail.com
+                        wasdqert1222@gmail.com
                     </div>
                 </div>
-                <a class="btt">
+                <a class="btt" href="#top">
                     Back to top
                     <img src="./source/svg/top-arrow.svg" alt="">
                 </a>

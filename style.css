@@ -20,6 +20,18 @@ body
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+img {
+    color: white;
+}
+
+.disabled {
+    display: none;
+}
+
 @media (min-width: 300px)
 {
     .header
@@ -153,6 +165,7 @@ body
 
     .adv-tabs
     {
+        cursor: pointer;
         width: 246px;
         height: 200px;
         border: 1px solid rgba(123, 74, 226, 0.5);
@@ -162,6 +175,11 @@ body
         justify-content: center;
         flex-direction: column;
         gap: 30px;
+    }
+
+    .current {
+        background-color: rgba(123, 74, 226, 0.1);
+        border: none;
     }
 
     .adv-tabs:hover
@@ -267,6 +285,7 @@ body
         border: 1px solid #33245F;
         padding: 10px;
         margin: 10px 20px;
+        height: 400px;
     }
 
     .card-header
@@ -317,9 +336,9 @@ body
         border-radius: 12px;
         color: #7B4AE2;
         display: flex;
+        margin-top: auto;
         align-items: center;
         justify-content: center;
-        margin-top: 10px;
         text-decoration: none;
         transition: all 0.3s ease-in-out;
     }
