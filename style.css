@@ -390,7 +390,7 @@ img {
 
     .images
     {
-        margin-top: 40px;
+        margin: 40px;
     }
 
     .contacts
@@ -431,7 +431,7 @@ img {
 
     .hb
     {
-        display: block;
+        display: flex;
     }
 
     .bh-content
