@@ -1,142 +1,31 @@
-var canvas = document.getElementById("canvas"),
-    ctx = canvas.getContext('2d');
+const targetDivs = document.querySelectorAll("#info");
+const targetButtons = document.querySelectorAll("#bnt");
 
-canvas.width = 500;
-canvas.height = 500;
+for (let j = 0; j < targetDivs.length; j++) {
+  targetDivs[j].classList.add("disabled");
+};
+targetDivs[0].classList.remove("disabled");
 
-var stars = [], // Array that contains the stars
-    FPS = 120
-, // Frames per second
-    x = 40, // Number of stars
-    mouse = {
-      x: 0,
-      y: 0
-    };  // mouse location
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-// Push stars to array
-
-for (var i = 0; i < x; i++) {
-  stars.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    radius: Math.random() * 1 + 1,
-    vx: Math.floor(Math.random() * 50) - 25,
-    vy: Math.floor(Math.random() * 50) - 25
-  });
-}
-
-// Draw the scene
-
-function draw() {
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  
-  ctx.globalCompositeOperation = "lighter";
-  
-  for (var i = 0, x = stars.length; i < x; i++) {
-    var s = stars[i];
-  
-    ctx.fillStyle = "#fff";
-    ctx.beginPath();
-    ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
-    ctx.fill();
-    ctx.fillStyle = 'black';
-    ctx.stroke();
-  }
-  
-  ctx.beginPath();
-  for (var i = 0, x = stars.length; i < x; i++) {
-    var starI = stars[i];
-    ctx.moveTo(starI.x,starI.y); 
-    if(distance(mouse, starI) < 150) ctx.lineTo(mouse.x, mouse.y);
-    for (var j = 0, x = stars.length; j < x; j++) {
-      var starII = stars[j];
-      if(distance(starI, starII) < 150) {
-        ctx.lineTo(starII.x,starII.y); 
-      }
-    }
-  }
-  ctx.lineWidth = 0.05;
-  ctx.strokeStyle = 'white';
-  ctx.stroke();
-}
-
-function distance( point1, point2 ){
-  var xs = 0;
-  var ys = 0;
- 
-  xs = point2.x - point1.x;
-  xs = xs * xs;
- 
-  ys = point2.y - point1.y;
-  ys = ys * ys;
- 
-  return Math.sqrt( xs + ys );
-}
-
-// Update star locations
-
-function update() {
-  for (var i = 0, x = stars.length; i < x; i++) {
-    var s = stars[i];
-  
-    s.x += s.vx / FPS;
-    s.y += s.vy / FPS;
-    
-    if (s.x < 0 || s.x > canvas.width) s.vx = -s.vx;
-    if (s.y < 0 || s.y > canvas.height) s.vy = -s.vy;
-  }
-}
-
-canvas.addEventListener('mousemove', function(e){
-  mouse.x = e.clientX;
-  mouse.y = e.clientY;
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
 
-// Update and draw
-
-function tick() {
-  draw();
-  update();
-  requestAnimationFrame(tick);
-}
-
-tick();
-
-const targetDiv1 = document.getElementById("p-info");
-const btn1 = document.getElementById("p-bnt");
-const targetDiv2 = document.getElementById("f-info");
-const btn2 = document.getElementById("f-bnt");
-const targetDiv3 = document.getElementById("d-info");
-const btn3 = document.getElementById("d-bnt");
-btn1.onclick = function () {
-  targetDiv2.style.display = "none";
-  targetDiv3.style.display = "none";
-  if (targetDiv1.style.display !== "none") {
-    targetDiv1.style.display = "none";
-  } else {
-    targetDiv1.style.display = "block";
-  }
-}
-
-btn2.onclick = function () {
-  targetDiv1.style.display = "none";
-  targetDiv3.style.display = "none";
-  if (targetDiv2.style.display !== "none") {
-    targetDiv2.style.display = "none";
-  } else {
-    targetDiv2.style.display = "block";
-  }
-}
-
-btn3.onclick = function () {
-  targetDiv2.style.display = "none";
-  targetDiv1.style.display = "none";
-  if (targetDiv3.style.display !== "none") {
-    targetDiv3.style.display = "none";
-  } else {
-    targetDiv3.style.display = "block";
-  }
-}
+for (let i = 0; i < targetButtons.length; i++) {
+  targetButtons[i].addEventListener("click", () => {
+    for (let j = 0; j < targetDivs.length; j++) {
+      targetDivs[j].classList.add("disabled");
+      targetButtons[j].classList.remove("current");
+    };
+    targetDivs[i].classList.remove("disabled");
+    targetButtons[i].classList.add("current");
+  })
+};
 
 document.getElementById("cards").onmousemove = e => {
   for(const card of document.getElementsByClassName("card")) {
